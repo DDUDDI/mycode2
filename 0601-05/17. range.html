@@ -1,0 +1,26 @@
+<!--range 컨트롤을 이용자가 조작할 때 마다
+그 값이 바로 위에 표시되도록 한다(0~10, step=1)-->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset='utf8'>
+        <title>range control</title>
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+        <style>
+            div#rng_cont>input[type=range]{
+                width:200px;
+            }
+            div#rng_cont>output{
+                position:relative; left:100px; width:100px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id='rng_cont'>
+        <output id='result'>5</output><br>
+        0 <input type='range' id='likes' min='0' max='10' step='1' value='5' 
+        oninput="$('#result').val(this.value);"> 10
+        </div>
+    </body>
+</html>

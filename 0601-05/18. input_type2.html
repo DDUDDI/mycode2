@@ -1,0 +1,33 @@
+<!--checkbox 2개 결혼여부 입력 예/아니오-->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf8">
+        <title>checkbox</title>
+        <style>
+            p {
+                font-weight: bolder;
+            }
+            #submitformbtn {
+                width: 100px
+            }
+        </style>
+    </head>
+    <body>
+        <form method='get'>
+            <!--checkbox는 하나 혹은 그 이상의 옵션 선택에 사용-->
+            <!--따라서 아래 예제는 checkbox로 하기에 부적합-->
+            <p>결혼여부</p>
+            <label for='marriage'>미혼</label><input type='checkbox' value='n' checked='checked' name='marriage' id='marriage'>
+            <label for='marriage'>기혼</label><input type='checkbox' value='y' name='marriage' id='marriage'>
+            <!--radio button은 여러가지 선택 옵션 중 하나만 선택할 때 사용-->
+            <p>성별</p>
+            <label for='gender'>여성</label><input type='radio' value='f' checked='checked' name='gender' id='gender'>
+            <label for='gender'>남성</label><input type='radio' value='m' name='gender' id='gender'>
+            <p>이미지 버튼</p>
+            <input type='image' src='image/flower.jpg' id='submitformbtn'>
+            <div><button type="submit">제출</button></div>
+        </form>
+        </body>
+</html>

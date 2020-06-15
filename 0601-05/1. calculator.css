@@ -1,0 +1,7 @@
+h1 {text-align: center;}
+form {border: 1px solid black; width: 360px; padding: 10px; margin-left:auto; margin-right:auto;}
+input {width: 80px; text-align: right;}
+input#op {text-align: center;}
+input::placeholder {text-align: center;}
+input#op {width: 50px;}
+button {width: 355px; height: 40px; margin-left: auto; margin-right: auto;}

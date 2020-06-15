@@ -1,0 +1,15 @@
+form {border: 1px solid black; width: 350px; padding: 10px}
+table {width: 330px;}
+table#outer {width:325px; border-collapse: collapse;
+    border: 1px dotted black;}
+td {height: 30px; padding:5px;}
+td.top {border:1px dotted black; padding: 10px; padding-bottom: 20px;}
+td.input {background-color:lightblue;}
+label {display: inline-block; width: 60px; text-align: right;}
+input {width: 120px;}
+#link a {text-decoration: none;}
+td#link {border: 1px dotted gray;}
+td#btn {padding-left: 10px;}
+button {height: 80px; width: 80px;}
+
+

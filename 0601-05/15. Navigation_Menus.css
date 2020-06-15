@@ -1,0 +1,68 @@
+h1 {
+    text-align: center;
+}
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+li {
+    list-style: none;
+}
+#navigationBar {
+    position: relative;
+    margin: 0 auto;
+    padding: 0;
+    width: 700px;
+    height: 50px;
+}
+#navigationBar ul {
+    margin: 0 auto;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(241, 240, 209);
+    overflow: visible;
+}
+#navigationBar ul>li {
+    display: block;
+    float: left;
+    width: 25%;
+    height: auto;
+    font-size: 20px;
+    text-align: center;
+    line-height: 50px;
+}
+#navigationBar ul>li:hover {
+    background-color: rgb(228, 206, 168);
+}
+#navigationBar ul>li a {
+    text-decoration: none;
+    color: gray;
+}
+#navigationBar ul>li a:hover {
+    font-weight: bold;
+    color: white;
+}
+#navigationBar ul ul li {
+    position: relative;
+    float: none;
+    padding: 0 0 0 10px;
+    width: 94%;
+    height: auto;
+    font-size: 15px;
+    text-align: left;
+    line-height: 50px;
+    background-color: ivory;   
+    display: none;
+
+}
+#navigationBar ul>li:hover li {
+    display: block;
+}
+#navigationBar ul ul li:hover {
+    background-color: ivory;
+}
+#navigationBar ul ul li a:hover {
+    font-weight: bold;
+    color:rgb(226, 155, 122);
+}

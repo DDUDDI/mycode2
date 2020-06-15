@@ -1,0 +1,16 @@
+Heroku에 html file 연결하기
+
+[만들어야 하는 파일]
+index.php
+<?php include_once("home.html"); ?>
+
+composer.json
+{}
+
+[cmd 명령]
+heroku login으로 로그인
+git init 명령 실행(앱 초기화)
+heroku git:remote -a app이름
+git add . 명령 실행(현재 폴더의 모든 내용을 앱에 포함)
+git commit -am "아무말"
+git push heroku master

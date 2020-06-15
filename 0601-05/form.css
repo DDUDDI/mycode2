@@ -1,0 +1,49 @@
+body {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background-color: rgb(240, 240, 240);
+}
+#container {
+    /*내부를 감쌀 수 있는 크기 정도로*/
+    width: fit-content;
+    margin: 0 auto;
+}
+form {
+    padding: 50px 0;
+    background-color: white;
+    width: 600px;
+    border: 1px solid gray;  
+}
+div {
+    margin-bottom: 30px;
+}
+label {
+    display: inline-block;
+    width: 150px;
+    text-align: right;
+    margin: 0 30px;
+    font-size: 110%;
+}
+.req label {
+    font-weight: bold;
+}
+#uname, #dList, #tBox {
+    background-color: rgb(197, 197, 197);
+    border: 1px solid gray;;
+    width: 250px;
+}
+#dList {
+    font-size: 140%;
+    font-weight: bold;
+    /*모서리 둥글게*/
+    border-radius: 10px;
+    position: absolute
+}
+#tBox {
+    background-color: rgb(230, 230, 230);
+    vertical-align: middle;
+}
+button{
+    position: relative;
+    left: 210px;
+    border-radius: 10px
+}

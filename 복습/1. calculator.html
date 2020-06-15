@@ -1,0 +1,49 @@
+<!--javascript를 사용하여 웹페이지에 가감승제 계산기를 만들어보세요.
+<input type='text' name='num1' id='num1'>으로 입력박스를 선언했다면,
+$('#num1').val()는 박스 안에 입력된 값을 가져올 수 있고,
+그 값은 문자열로 취급되므로 자바스크립트 parseFloat('3.14') 함수를
+이용하여 가감승제가 가능한 숫자로 변환할 수 있다.
+입력박스를 총 4개 만들어 각각 num1, op, num2, num3와 같이 아이디를 
+설정하고 [계산] 버튼을 누르면 num1에 입력된 수와 num2에 입력된 수를 가져와서
+op에 입력된 가감승제 연산자에 따라 산술계산을 수행하고 그 결과는 num3에 저장하면 된다.
+$('#num3').value=[계산된 값]-->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset='utf8'>
+        <title>calculator</title>
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+        <script>
+            function calc() {
+                var num1=parseFloat($('#num1').val());
+                var op=$('#op').val();
+                var num2=parseFloat($('#num2').val());
+                var res=0.0;
+                if (op=='+'){
+                    res=num1+num2;
+                }
+                else if (op=='-'){
+                    res=num1-num2;
+                }
+                else if (op=='*'){
+                    res=num1*num2;
+                }
+                else if (op=='/'){
+                    res=num1/num2;
+                }
+                else alert('입력 오류');
+                $('#res').val(res);
+            }
+        </script>
+    <body>
+        <form>
+            <input type='text' name='num1' id='num1'>
+            <input type='text' name='op' id='op'>
+            <input type='text' name='num2' id='num2'>
+            <input type='text' name='res' id='res'>
+            <div>
+                <button type=button onclick='calc();'>계산</button>
+            </div>
+        </form>
+    </body>

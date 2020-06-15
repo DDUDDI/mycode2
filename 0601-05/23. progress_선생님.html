@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset='utf8'>
+        <title>range control</title>
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+        <script>
+            function change(tf){
+                var per=parseInt($('#prog').val());
+                var newper=0;
+                /*return은 값 반환과 함수 종료 의미*/
+                /*per이 100이고 tf가 true여서 값을 올리라고 하면*/
+                if(per==100 && tf) return;
+                /*per이 0이고 tf가 false여서 값을 내리라고 하면*/
+                if(per==0 && !tf) return;
+                if(tf==true){
+                    newper=per+10;
+                }
+                else {
+                    newper=per-10;
+                }
+                console.log(newper);
+                $('#prog').val(newper);
+                $('#pv').val(newper+'%');
+            }
+        </script>
+    </head>
+    <body>
+        <h3>Progress</h3>
+        <p><output id='pv'>0%</output></p>
+        <progress id='prog' value='50' max='100'></progress>
+        <button type='button' id='plus' onclick='change(true);'>올리기</button>
+        <button type='button' id='minus' onclick='change(false);'>내리기</button>
+    </body>
+</html>

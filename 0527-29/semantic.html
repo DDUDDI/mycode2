@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Semantic</title>
+        <style>
+            span {background: yellow; font-weight: bold; text-decoration: underline;}
+            /*p:hover: p 태그의 유사클래스 hover*/
+            span:hover {background: red; color: white;}
+        </style>
+    </head>
+    <body>
+        <!--기존: <div id='header'>-->
+        <!--div 역할을 하는 semantic tag 사용해서 section 구분-->
+        <header>
+            TOP Menu
+        </header>
+        <main>
+            Main Contents
+        </main>
+        <footer>
+            Page Footer
+        </footer>
+        <!--semantic tags-->
+        <!--em: italic-->
+        <p>The anteater is the <em>strangest</em> looking animal, isn't it?</p>
+        <!--strong: bold-->
+        <p>Take a <strong>left turn</strong> at <strong>Dee's Hop Stop</strong></p>
+        <!--code: define some text as computer code-->
+        <p><code>#include "trans.h"</code></p>
+        <!--samp: define sample output from a computer program-->
+        <p>The URL for that page is <samp>http://www.cern.ch/</samp></p>
+        <!--define keyboard input-->
+        <p>Type the following command: <kbd>find . -name "prune" - print</kbd></p>
+        <!--defines a variable in programming-->
+        <p><code>chown </code><var>your_name the_file</var></p>
+        <!--specifies a term-->
+        <p>Styles that are named after how they are used are called <dfn>logical styles</dfn></p>
+        <!--defines the title of a creative work-->
+        <p>Eggplant has been known to cause nausea in some people<cite> (Lemay, 1994)</cite></p>
+        
+        <!--The purpose of the span tag-->
+        <p>You've already seen how styles <span>can be used to modify</span> the appearance of various elements.</p>
+    </body>
+</html>

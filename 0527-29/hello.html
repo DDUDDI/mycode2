@@ -1,0 +1,79 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset =  'utf-8'>
+    <title>My First HTML</title>
+    <style>
+      body {background-color:#FF6F61;}
+      /*ID selecter: #id {}, Tag selecter: tag {}*/
+      #sp2 {color: white}
+      /*수평 메뉴
+      li {display: inline}
+      */
+      ul {border: 1px dashed white; width: 100px; padding: 40px;}
+      ul li a {text-decoration: none; color: black;}     
+    </style>
+    <script> 
+      function test() {
+	alert('안녕하세요?');
+	console.log('환영합니다.');
+       }
+    </script> 
+  </head>
+  <body>	
+    <h1>Hello World!</h1>
+    <!--주석입니다
+    <h2>Hello World!</h2>
+    <h3>Hello World!</h3>
+    <h4>Hello World!</h4>
+    <h5>Hello World!</h5>
+    <h6>Hello World!</h6>
+    -->
+    <!--inline style: 옛날 방식-->
+      <div style = 'color: white;'>환영합니다:)</div>
+      <p>
+        <span>SPAN1</span>
+        <span id = 'sp2'>SPAN2</span>
+        <span>SPAN3</span>
+      </p>
+      <p>
+        <button type = 'button' onclick = 'test()'>클릭</button>
+        <!--a(tag): anchor, 특정 요소를 클릭하면 해당 위치로 이동-->
+        <!--href(att): hyper reference--> 
+        <a href = 'http://google.com'>Google</a>
+      </p>
+      <!--ul: unordered list, ol: ordered list, li: list item-->
+      <!--
+      <ul>
+        <li>Python</li>
+        <li>HTML</li>
+        <li>javascript</li>
+      </ul>
+      <ol>
+        <li>Python</li>
+        <li>HTML</li>
+        <li>javascript</li>
+      </ol>
+      -->
+      <p>
+        <ul style = 'list-style-image: url(image/bullet.png);'>
+          <li>Python</li>
+          <li>HTML</li>
+          <li>javascript</li>
+        </ul>
+      </p>
+      <p>
+        <!-- dl: def list, dt: def terminology, dd: def description-->
+        <dl>
+          <dt>Alphabet</dt>
+            <dd>알파벳은 영어를 기술하는 문자이다.</dd>
+        </dl>
+      </p>
+      <p>
+        <ul>
+          <li><a href = 'menu/menu.html'>메뉴 이동</a></li>
+          <li><a href = 'http://google.com'>Google 이동</a></li>
+        </ul>
+      </p>
+  </body>
+</html>

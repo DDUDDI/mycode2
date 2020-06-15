@@ -1,0 +1,66 @@
+<!--
+    form은 server로 data를 보내기 위한 것
+    - <form action='목적지(back-end script명)', method='전송방법(거의 post or get)'></form>
+    form 내부 input
+    - input의 name은 중복 O, 백엔드, 프론트엔드(javascript) 모두 사용
+    - input의 id는 중복 x, 주로 javascript에서 사용하기 위해 지정
+    label과 input은 name or id명으로 연결
+    input type
+    - reset: 입력 내용 초기화
+-->
+<!--
+<form action='/form-processing-script' method='post'>
+    <label for='username'>Username</label>
+    <input type='text' name='username' required placeholder='id'>
+    <label for='password'>Password</label>
+    <input type='password' name='password'>
+    <button type='submit'>Login</button>
+</form>
+-->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset='utf8'>
+        <title>background test</title>
+        <script>
+            function checkForm(frm) {
+                var uname=frm.uname.value;
+                /*input type='text'라도 parsInt()로 정수 변환 해야함*/
+                var num=parseInt(frm.num.value);
+                if(uname.length<3){
+                    alert('이름을 확인해주세요');
+                    return false;
+                }
+                if(num<1){
+                    alert('번호는 0보다 커야 합니다');
+                    return false;
+                }
+                return true;
+            }
+        </script>
+    </head>
+    <body>
+        <form action='서버측 수신 프로그램' method='post' onsubmit='return checkForm(this);'>
+        <!--onsubmit='return checkForm(this)의 의미 
+            submit하면 form객체를 checkForm()에 전달하고 값을 웹브라우저에 return해라-->
+            
+            <label for='num'>번호</label><input type='number' name='num' id='num'>
+            <label for='uname'>이름</label><input type='text' name='uname' id='uname'>
+            <label for='email'>Email</label><input type='email' name='email' id='email'>
+            <!--pattern: {갯수}-->
+            <label> Part number: <input pattern='[0-9][A-Z]{3}' name='part' title='A part number is a digit followed by three uppercase letters.'></label>
+            <button type='submit'>SEND</button>
+        </form>
+        <p></p>
+        <label for='move'>Your Move: </label><input id='move' list='game'>
+        <datalist id='game'>
+                    <option value=''></option>
+                    <option value='rock'></option>
+                    <option value='paper'></option>
+                    <option value='scissors'></option>
+                </select>
+            </label>
+        </datalist>
+    </body>
+</html>

@@ -1,0 +1,45 @@
+<!--첫번째 div는 브라우저 원점으로부터 200, 200 떨어져 있고
+    두번째 div는 브라우저 원점으로부터 400, 400 떨어져 있고
+    세번째 div는 두번째 div로부터 200, 200 떨어지도록 배치-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            /*
+            body {
+                margin: 0; padding: 0;
+            }
+            */
+            div {
+                width: 200px; height: 200px;
+                border: 1px dashed;
+                }
+            #div1 {
+                /*position:relative; left:200px; top:200px;*/
+                position: absolute;
+                left: 200px; top: 200px;
+                border-color: red;
+            }
+            #div2 {
+                /*position:relative; left:200px; top:200px;*/
+                position: absolute;
+                left: 200px; top: 200px;
+                border-color: green;
+            }
+            #div3 {
+                /*부모에게 position 속성을 주지 않으면 웹 브라우저 좌 상단(body)을 기준으로 움직임*/
+                /*부모에게 position 속성을 주면 부모를 기준으로 절댓값 위치가 계산됨*/
+                /*position:absolute; left:200px; top:200px;*/
+                position: absolute;
+                left: 200px; top: 200px;
+                border-color: blue; 
+            }
+        </style>
+    </head>
+    <body>
+        <div id='div1'>
+            <div id='div2'>
+                <div id='div3'></div>
+            </div>
+        </div>
+    </body>

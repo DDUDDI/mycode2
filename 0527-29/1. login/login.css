@@ -1,0 +1,13 @@
+/*폼의 테두리 1px solid black, width 300px
+input 박스의 width 100px, 테두리 1px dotted blue*/
+
+/*margin:0px auto: 웹페이지 중간에 위치*/
+form {border:1px solid black; width:300px; margin:0px auto; padding:20px; 
+    color:violet;font-weight:bold; background-color:#DDDDFF;}
+#container {text-align: center;}
+label {display:inline-block; width:60px; text-align: right; padding:5px;}
+input {border:2px dotted #A9E2C5; width:100px; background-color:violet;}
+input::placeholder {color:white;}
+button {margin:10px; background-color:violet;
+    font-family:'Sunflower', sans-serif; color:white}
+

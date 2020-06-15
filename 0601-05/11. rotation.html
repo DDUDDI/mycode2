@@ -1,0 +1,62 @@
+<!--html은 Document object Model-->
+<!--html의 tag는 객체화해서 사용함-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            div {
+                position: relative;
+                width: 200px; height: 200px;
+                margin: 0 auto;
+                border: 1px solid black;
+                text-align: center;
+                font-weight: bold;
+                line-height: 200px;
+            }
+            #div3 {
+                background-color: hotpink;
+                z-index: 1;
+            }
+            #div4 {
+                background-color: pink;
+                top: -202px;
+                z-index: 2;
+            }
+            #div5 {
+                background-color: plum;
+                top: -404px;
+                z-index: 3;
+            }
+            #bt {
+                border: none;
+                margin: 0 auto;
+                bottom: 450px;
+            }
+        </style>
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+        <script>
+                /*jQuery Objects*/
+                /*ready 함수는 load 되자마자 처리됨*/
+                $(function(){
+                    elms=[$('#div3'), $('#div4'), $('#div5')];
+                });
+                var arr = [1, 2, 3];
+                /*load 함수*/
+                function rot(){
+                    console.log(arr);
+                    /*for loop*/
+                    for(var i=0; i<3; i++) {
+                        arr[i]++;
+                        if(arr[i]>3) arr[i]=1;
+                        elms[i].css('z-index', arr[i]);
+                    }
+                }
+        </script>
+    </head>
+    <body>
+            <div id='div3'>div3</div>
+            <div id='div4'>div4</div>
+            <div id='div5'>div5</div>
+            <div id='bt'><button type=button onclick='rot();'>rotation</button></div>
+    </body>
+</html>

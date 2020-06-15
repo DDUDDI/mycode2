@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf8">
+        <title>Image Notes</title>
+        <style>
+            h1 {text-align: center;}
+            /*position absolute일 때 가운데 정렬*/
+            div#img {
+                width: 700px;
+                margin: 0 auto;
+                position: relative;
+            }
+            img {
+                width: 800px;
+            }
+            a {
+                position: absolute;
+                text-decoration: none;
+                color: black;
+                font-weight: bold;
+                top: 10px;
+                visibility: hidden;
+            }
+            /*display: block과 visability: visible은 다름*/
+            div:hover a {
+                visibility: visible;
+            }
+            #pre {
+                left: 20px;
+            }
+            #post {
+                right: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Claude Monet The Bridge at Argenteuil</h1>
+        <div id='img'>
+            <div id='nav'>
+                <a href='11. rotation.html' id='pre'>Previous</a>
+                <a href='11. rotation.html' id='post'>Next</a>
+            </div>
+            <img src='image/picture.jpg'>
+        </div>
+    </body>
+</html>

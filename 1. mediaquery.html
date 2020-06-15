@@ -1,0 +1,57 @@
+<!--화면의 폭이 300px 이하, 301~600px, 601~그 이상
+    위와 같이 미디어의 폭을 정해서 아래의 내용이 구현되도록 한다.
+
+    300px 이하: 250px 폭을 가진 div 태그 3개 수직 배치
+    301~600px: 250px 폭을 가진 div 태그 2개 수평 배치, 1개 아래에 배치
+    601~그 이상: 250px 폭을 가진 div 태그 3개를 수평으로 배치-->
+<!doctype html>
+<html>
+    <head>
+        <meta charset='utf-8'>
+        <meta name='viewport' content='width=device-width'>
+        <!--favicon 사용법-->
+        <link rel='shortcut icon' href='img/favicon.ico'/>
+        <style>
+            body {
+                margin: 0; padding: 0;
+            }
+            #container {
+                font-size: 0;
+            }
+            #container div {
+                width: 250px;
+                line-height: 250px;
+                text-align: center;
+                color: black;
+                font-size: 20px;
+            }
+            #div1 {
+                background-color: red;
+            }
+            #div2 {
+                background-color: green;
+            }
+            #div3 {
+                background-color: blue;
+            }
+
+            @media screen and (max-width: 300px) {
+                div {display: block;}
+            }
+            @media screen and (min-width: 301px) and (max-width: 600px) {
+                #div1, #div2 {display: inline-block;}
+                #div3 {display: block;}
+            }
+            @media screen and (min-width: 601px) {
+                div {display: inline-block;}
+            }
+        </style>
+    </head>
+    <body>
+        <div id='container'>
+            <div id='div1'>div1</div>
+            <div id='div2'>div2</div>
+            <div id='div3'>div3</div>
+        </div>
+    </body>
+</html>

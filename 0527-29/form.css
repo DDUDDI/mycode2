@@ -1,0 +1,8 @@
+/*폼의 테두리 1px solid black, width 300px
+input 박스의 width 100px, 테두리 1px dotted blue*/
+
+form {border:1px solid black; width:300px; padding:20px; 
+    color:#C8EE9D; font-weight:bold}
+input {border:2px dotted #A9E2C5; width:100px;}
+button {margin-top:15px; margin-left:22px; background-color:#A9E2C5;
+    font-family: 'Sunflower', sans-serif; color:white}

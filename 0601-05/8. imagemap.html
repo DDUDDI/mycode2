@@ -1,0 +1,27 @@
+<!--지도와 이미지맵을 사용하여 각 도의 영역을 클릭하면-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>image map</title>
+        <style>
+            h1{text-align: center}
+            img {display: block; margin: 0 auto;}
+        </style>
+    </head>
+    <body>
+        <h1>Image Map</h1>
+        <img src='image/map.jpg' usemap='#incheon'>
+        <map name='incheon'>
+            <area shape='poly' coords='147,48, 198,7, 254,46, 269,85, 267,116, 274,149, 207,203, 163,188, 184,155, 150, 108' 
+            href='http://www.ganghwa.go.kr/open_content/main/' onfocus='this.blur()'>
+            <area shape='poly' coords='285,188, 338,150, 378,189, 351,194, 366,224, 352,238, 364,269, 353,282, 329,256, 320,261, 314,239, 339,230, 304,238, 292,228, 289,233, 294,241, 288,249, 283,220, 291,209'
+            href='https://www.seo.incheon.kr/open_content/main/' onfocus='this.blur()'>
+            <area shape='poly' coords='353,196, 376,195, 386,187, 423,198, 401,243, 352,241, 353,232, 370,222'
+            href='http://www.gyeyang.go.kr/open_content/main/' onfocus='this.blur()'>
+            <area shape='poly' coords='352,242, 402,242, 391,255, 394,264, 389,271, 404,273, 407,281, 392,289, 370,280, 359,286, 362,268'
+            href='http://www.icbp.go.kr/main/' onfocus='this.blur()'>
+            <area shape="circle" coords='192,348, 20' href='https://www.ongjin.go.kr/open_content/main/' onfocus='this.blur()'>
+            <area shape="rect" coords='291,272, 324,314' href='http://www.icjg.go.kr/index' onfocus='this.blur()'>
+        </map>
+    </body>
+</html>

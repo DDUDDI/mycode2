@@ -1,0 +1,56 @@
+<!--Link를 이용한 만들기
+naver.com, google.com, daum.net으로 이동할 수 있도록
+Link를 이용한 메뉴 시스템을 만들고 테스트하기 
+각 링크는 수직으로 배치-->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf8">
+        <title>link menu</title>
+        <link href="https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&family=Sunflower:wght@300&display=swap" rel="stylesheet">
+        <style>
+            /*style에서 공백은 자손 selector을 의미함*/
+            h1 {font-family: 'Nanum Pen Script', cursive;}
+            li {font-family: 'Sunflower', sans-serif;}
+            #menu {border:2px dotted #A9E2C5; width:110px; margin-top:20px}
+            #menu ul {list-style: none; color: #C8EE9D;}
+            #menu a {text-decoration: none; color: #C8EE9D;}
+            #menu a:hover {text-decoration: underline; color: #DDDDFF;}
+ 
+            #menu2 ul {border:2px dotted #A9E2C5; width:190px; list-style: none; color: #C8EE9D;}
+            #menu2 li {display:inline;}
+            #menu2 a {text-decoration: none; color: #C8EE9D;}
+            #menu2 a:hover {text-decoration: underline; background-color: #DDDDFF; color: white;}
+
+        </style>
+        <link rel='stylesheet' href='form.css' type='text/css'>
+    </head>
+    <body>
+        <h1 style = 'color: #DDDDFF;'>Link를 이용한 메뉴 만들기</h1>
+        <hr width ='90%' size='2' align='left'>
+        <form method = 'post' onsubmit=''>
+        Id <input type ='text' name ='id'>
+        Pwd <input type = 'password' name ='pwd'>
+        <button type='button' onclick='check_form()'>Login</button>
+        </form>
+        <!--div: container 용도(block level)-->
+        <div id='menu'>
+            <ul style = 'list-style-image: url(image/check.png);'>
+                <li><a href = 'https://www.naver.com/', target='_blank'><b>Naver</b></a></li>
+                <li><a href = 'https://www.google.com/', target='_blank'><b>Google</b></a></li>
+                <li><a href = 'https://www.daum.net/', target='_blank'><b>Daum</b></a></li>
+            </ul>
+        </div>
+        <div id='menu2'>
+             <ul>
+                <li><a href = 'https://www.naver.com/', target='_blank'><b>Naver</b></a></li>
+                <li><a href = 'https://www.google.com/', target='_blank'><b>Google</b></a></li>
+                <li><a href = 'https://www.daum.net/', target='_blank'><b>Daum</b></a></li>
+            </ul>
+        </div>
+        <!--
+        <img src='image/cm.png'
+        -->
+    </body>
+</html>

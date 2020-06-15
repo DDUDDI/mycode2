@@ -1,0 +1,45 @@
+<!--이용자가 textarea에 문장을 입력하고 버튼을 누르면
+    입력된 문자열에 추가하여 '참 잘했어요~'를 덧붙여서
+    다시 textarea에 넣는다-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf8">
+        <title>text area</title>
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+        <script>
+            function AddText(a){
+                /*
+                var text=' 참 잘했어요~';
+                console.log(a);
+                a += text;
+                console.log(a)
+                $('textarea').val(a);
+                */
+
+                /*
+                var text=$('#textarea').val();
+                console.log(text);
+                text += ' 참 잘했어요~';
+                $('#textarea').val(text);
+                */
+                /*
+                $('#textarea').val($('#textarea').val()+'참 잘했어요~');
+                */  
+            }
+        
+        </script>
+        <style>
+            label {
+                display: block;
+            }
+        </style>
+    </head>
+    <body>
+        <form method="POST">
+            <label for='textarea'>Please comment on our customer service</label>
+            <textarea name='textarea' id='textarea' rows='10' cols='60'>안녕하세요</textarea>
+            <button type="button" onclick="AddText($('#textarea').val());">submit</button>
+        </form>
+    </body>
+</html>

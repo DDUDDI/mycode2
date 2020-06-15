@@ -1,0 +1,35 @@
+<!--원래의 이미지를 화면에 표시하고 그 아래에 축소/확대 버튼을 둔다.
+버튼을 한 번 클릭할 때 마다 10px씩 확대/축소가 되도록 해보세요.-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+        <script>
+            /*parameter 값 받아서 처리하는 방법도 있음*/
+            var x=700;
+            function reduction() {
+                if ($('#reduction').click) {
+                    x-=10;
+                    $('#image').css('width', x+'px');
+                }
+            }
+            function enlargement() {
+                if ($('#enlargement').click) {
+                    x+=10;
+                    $('#image').css('width', x+'px');
+                }
+            }
+        </script>
+        <style>
+            img {width: 700px;}
+            button {width: 50px;}
+        </style>
+    </head>
+    <body>
+        <p>
+            <button type='button' id='reduction' onclick='reduction();'>축소</button>
+            <button type='button' id='enlargement' onclick='enlargement();'>확대</button>
+        </p>
+        <img src='image/lotteworld.png' id=image>
+    </body>
+</html>

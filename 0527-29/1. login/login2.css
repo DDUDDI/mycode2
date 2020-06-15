@@ -1,0 +1,7 @@
+form {border: 1px solid black; width:300px; padding:10px;}
+#main {border: 1px solid rgb(197, 197, 197); width:270px;padding:10px; margin:5px; margin-bottom: 0;}
+#main #input, #signin {display:inline-block; vertical-align: middle;}
+#signin button{border: 0; background-color: grey; color:white; width:80px; height:80px; margin:5px; padding:10px}
+input {border: 0;background-color: rgb(231, 231, 231); width:150px; height: 30px; margin: 5px;}
+#signup {border: 1px solid rgb(197, 197, 197); border-top: 0; width:270px; padding:10px; margin:5px; margin-top: 0;}
+#signup button {border: 0; background-color: white;}

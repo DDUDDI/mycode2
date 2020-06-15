@@ -1,0 +1,113 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: #225455;
+    font-family: 'Open Sans', sans-serif;
+}
+
+/*header*/
+header {
+    position: relative;
+    width: 100%;
+    height: 115px;
+}
+h1{
+    color: #FEFE02;
+    text-align: center;
+    font-size: 40px;
+    font-weight: bolder;
+}
+h2 {
+    color: white;
+    margin-top: 5px;
+    text-align: center;
+    font-style: italic;
+    font-weight: 500;
+}
+nav {
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    height: fit-content;
+    background-color: #3F0046;
+}
+#topmenu {
+    text-align: center;
+}
+#topmenu li {
+    display: inline-block;
+    width: fit-content;
+    padding: 0 20px;
+    border-right: 1px solid #FEFE02;
+    color: white;
+}
+#topmenu li:last-child{
+    border: none;
+}
+
+/*main*/
+/*높이 정하기*/
+main {
+    float: left;
+    width: 85%;
+    height: 90%;
+}
+.content {
+    margin: 0 20px;
+    padding: 20px 60px;
+    background-color: white;
+}
+#title {
+    font-size: 130%;
+    font-weight: bold;
+}
+img {
+    margin: 20px 0;
+    width: 400px;
+}
+
+/*footer*/
+footer{
+    float: left;
+    width: 100%;
+    height: fit-content;
+}
+footer #content{
+    height: 100%;
+    margin: 0 20px;
+    padding: 5px 60px;
+    background-color: #3F0046;
+    color: white;
+}
+footer span {
+    color: #FEFE02;
+    text-decoration: underline;
+}
+
+/*aside*/
+aside {
+    float: right;
+    width: 15%;
+}
+.aside_container{
+    margin-top: 15px;
+    margin-right: 20px;
+    width: 95%;
+    border: 2px solid #3F0046;
+}
+.aside_title {
+    padding: 2px;
+    background-color: #3F0046;
+    color: white;
+    text-align: left;
+    font-size: 120%;
+}
+.aside_list{
+    list-style: none;
+}
+.aside_list li{
+    padding: 2px;
+    background-color: white;
+}

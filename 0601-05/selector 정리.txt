@@ -1,0 +1,40 @@
+Selector
+
+1. 전체 Selector
+* {margin: 0;}
+
+2. 태그 Selector
+p {color: red;}
+
+3. 클래스 Selector
+.myClass {background-color: green;} >> myClass 속성값을 가진 모든 태그 선택
+div.myClass {background-color: yellow;} >> myClass 속성값을 가진 태그 중 div 태그 선택
+
+4. ID Selector
+#myId {color: red;} >> myID 아이디를 가진 모든 태그 선택
+div#myId {color: blue;} >> myID 아이디를 가진 태그 중 div 태그 선택
+
+5. 복합 Selector
+div ul {border: 1px solid black;} >> 하위 선택자, 부모 요소에 포함된 모든 하위 요소에 스타일 적용
+div>ul {border: 1px solid black;} >> 자식 선택자, 부모의 바로 아래 자식 요소에만 스타일 적용
+
+6. 형제 Selector
+h1+ul {background-color: yellow;} >> 인접 형제 선택자, 형제 중 첫번째 동생 요소에 스타일 적용
+h1~ul {background-color: yellow;} >> 일반 형제 선택자, 모든 동생 요소에 스타일 적용
+
+7. 속성 Selector
+a[href] >> href 속성이 포함된 a 태그 선택
+input[type='text'] >> type 속성의 값이 text인 input 태그 선택
+
+8. 가상 클래스(Pseudo-Classes) Selector
+E::link >> 방문하지 않은 링크 E 선택
+E::visited >> 방문한 링크 E 선택
+E::active >> E 요소가 활성화된 동안 E 선택
+E::hover >> E 요소에 마우스가 올라가 있는 동안 E 선택
+E::focus >> E 요소에 포커스가 머물러 있는 동안 E 선택
+
+9. 가상 엘리먼트 Selector
+E::first-line >> E 요소의 첫번째 라인 선택
+E::first-letter >> E 요소의 첫번째 문자 선택
+E::before >> E 요소의 시작 지점에 생성된 요소 선택
+E::after >> E 요소의 끝 지점에 생선된 요소 선택
